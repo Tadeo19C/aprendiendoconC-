@@ -1,0 +1,22 @@
+-- database: ./site.db
+
+-- Presione el botón ▷ en la esquina superior derecha de la ventana para ejecutar todo el archivo.
+
+ALTER TABLE exercise_answer
+ADD COLUMN user_id INTEGER;
+
+-- Ahora, establecer la clave foránea:
+PRAGMA foreign_keys=off;  -- Desactiva las restricciones de clave foránea temporalmente (si la base de datos es SQLite).
+
+CREATE INDEX IF NOT EXISTS idx_user_id ON exercise_answer(user_id);  -- Crea un índice para la columna user_id.
+
+PRAGMA foreign_keys=on;  -- Vuelve a activar las restricciones de clave foránea.
+
+-- Para establecer la clave foránea, si la base de datos es SQLite:
+PRAGMA foreign_keys=off;  -- Desactiva las restricciones de clave foránea temporalmente.
+
+ALTER TABLE exercise_answer
+ADD CONSTRAINT fk_user_id FOREIGN KEY (user_id) REFERENCES user(id);
+
+PRAGMA foreign_keys=on;  -- Vuelve a activar las restricciones de clave foránea.
+

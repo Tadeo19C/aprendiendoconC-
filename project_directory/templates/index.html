@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <section class="hero container">
+        <h1>Bienvenido al curso de C# en línea</h1>
+        <p>Aprende a programar en C# con un curso interactivo y práctico. Domina uno de los lenguajes más versátiles y demandados en la industria.</p>
+        <a href="#registro" class="btn">Comienza Ahora</a>
+    </section>
+
+    <section class="features container">
+        <div class="feature">
+            <h3>Contenido Completo</h3>
+            <p>Desde los fundamentos hasta temas avanzados, cubre todo lo que necesitas saber sobre C#.</p>
+        </div>
+        <div class="feature">
+            <h3>Proyectos Prácticos</h3>
+            <p>Aplica tus conocimientos en proyectos del mundo real para consolidar tu aprendizaje.</p>
+        </div>
+        <div class="feature">
+            <h3>Comunidad Activa</h3>
+            <p>Conecta con otros estudiantes y expertos para resolver dudas y compartir conocimientos.</p>
+        </div>
+        <div class="feature">
+            <h3>Certificación</h3>
+            <p>Obtén un certificado al completar el curso para validar tus habilidades en C#.</p>
+        </div>
+    </section>
+
+    <section class="why-csharp container">
+        <h2>¿Por qué aprender C#?</h2>
+        <div class="reasons">
+            <div>
+                <h3>Versatilidad</h3>
+                <p>Desarrolla aplicaciones de escritorio, web, móviles y juegos con un solo lenguaje.</p>
+            </div>
+            <div>
+                <h3>Alta Demanda</h3>
+                <p>C# es uno de los lenguajes más solicitados en la industria del desarrollo de software.</p>
+            </div>
+            <div>
+                <h3>Comunidad Sólida</h3>
+                <p>Accede a una amplia gama de recursos, bibliotecas y soporte de la comunidad.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="hero container">
+        <h2>¿Listo para comenzar tu viaje en C#?</h2>
+        <a href="{{ url_for('register') }}"" class="btn">Inscríbete Ahora</a>
+    </section>
+{% endblock %}

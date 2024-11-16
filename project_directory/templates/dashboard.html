@@ -1,0 +1,166 @@
+{% extends "layout.html" %}
+
+{% block title %}Panel de Usuario{% endblock %}
+
+{% block content %}
+<div class="dashboard-container">
+    <header class="dashboard-header">
+        <h2>Bienvenido, {{ user.username }}</h2>
+        <p>Aquí puedes acceder a tus módulos, ejercicios y ver tu progreso.</p>
+    </header>
+
+    <div class="dashboard-content">
+        <section class="modules-section">
+            <h3>Tus Módulos</h3>
+            <div class="modules-grid">
+                {% for module in modules %}
+                    <a href="{{ url_for('module', module_id=module.id) }}" class="module-card">
+                        <h4>{{ module.title }}</h4>
+                        <span class="module-arrow">→</span>
+                    </a>
+                {% endfor %}
+            </div>
+        </section>
+
+        <section class="actions-section">
+            <h3>Acciones Rápidas</h3>
+            <div class="actions-grid">
+                <a href="{{ url_for('start_course') }}" class="action-card">
+                    <i class="icon-start">▶</i>
+                    <span>Comenzar Curso</span>
+                </a>
+                <a href="{{ url_for('forum') }}" class="action-card">
+                    <i class="icon-forum">💬</i>
+                    <span>Foro de Estudiantes</span>
+                </a>
+                <a href="{{ url_for('certificate') }}" class="action-card">
+                    <i class="icon-certificate">🏆</i>
+                    <span>Descargar Certificado</span>
+                </a>
+            </div>
+        </section>
+    </div>
+</div>
+
+<style>
+    :root {
+        --purple-900: #4c1d95;
+        --purple-800: #5b21b6;
+        --purple-700: #6d28d9;
+        --purple-600: #7c3aed;
+        --purple-500: #8b5cf6;
+        --purple-400: #a78bfa;
+        --purple-300: #c4b5fd;
+        --purple-200: #ddd6fe;
+        --purple-100: #ede9fe;
+        --white: #ffffff;
+    }
+
+    .dashboard-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+        background-color: var(--white);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+
+    .dashboard-header {
+        background-color: var(--purple-700);
+        color: var(--white);
+        padding: 2rem;
+        border-radius: 8px 8px 0 0;
+        margin: -2rem -2rem 2rem -2rem;
+    }
+
+    .dashboard-header h2 {
+        margin: 0 0 0.5rem 0;
+        font-size: 2rem;
+    }
+
+    .dashboard-header p {
+        margin: 0;
+        font-size: 1.1rem;
+        opacity: 0.9;
+    }
+
+    .dashboard-content {
+        display: grid;
+        gap: 2rem;
+    }
+
+    .modules-section, .actions-section {
+        background-color: var(--purple-100);
+        border-radius: 8px;
+        padding: 1.5rem;
+    }
+
+    h3 {
+        color: var(--purple-800);
+        margin-top: 0;
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+    }
+
+    .modules-grid, .actions-grid {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+    .module-card, .action-card {
+        background-color: var(--white);
+        border-radius: 8px;
+        padding: 1.5rem;
+        text-decoration: none;
+        color: var(--purple-900);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .module-card:hover, .action-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .module-card h4, .action-card span {
+        margin: 0;
+        font-size: 1.1rem;
+    }
+
+    .module-arrow {
+        font-size: 1.5rem;
+        color: var(--purple-500);
+    }
+
+    .action-card {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .action-card i {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    @media (max-width: 768px) {
+        .dashboard-container {
+            padding: 1rem;
+        }
+
+        .dashboard-header {
+            padding: 1.5rem;
+            margin: -1rem -1rem 1rem -1rem;
+        }
+
+        .modules-grid, .actions-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+{% endblock %}

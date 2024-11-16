@@ -1,0 +1,298 @@
+:root {
+    --purple-900: #4c1d95;
+    --purple-800: #5b21b6;
+    --purple-700: #6d28d9;
+    --purple-600: #7c3aed;
+    --purple-500: #8b5cf6;
+    --purple-400: #a78bfa;
+    --purple-300: #c4b5fd;
+    --purple-200: #ddd6fe;
+    --purple-100: #ede9fe;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, var(--purple-900), var(--purple-700));
+    color: var(--white);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--purple-300);
+}
+
+.hero {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--purple-500);
+    color: var(--white);
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--purple-600);
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 4rem 0;
+}
+
+.feature {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.feature h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.why-csharp {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.why-csharp h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.reasons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+footer {
+    background-color: var(--purple-900);
+    color: var(--purple-200);
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 4rem;
+}
+
+footer a {
+    color: var(--purple-200);
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .features, .reasons {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+:root {
+    --purple-900: #4c1d95;
+    --purple-800: #5b21b6;
+    --purple-700: #6d28d9;
+    --purple-600: #7c3aed;
+    --purple-500: #8b5cf6;
+    --purple-400: #a78bfa;
+    --purple-300: #c4b5fd;
+    --purple-200: #ddd6fe;
+    --purple-100: #ede9fe;
+    --white: #ffffff;
+}
+
+.module-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: var(--white);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.module-header {
+    background-color: var(--purple-700);
+    color: var(--white);
+    padding: 1.5rem;
+    border-radius: 8px 8px 0 0;
+    margin: -2rem -2rem 2rem -2rem;
+}
+
+.module-header h2 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.module-content {
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.lessons-section, .exercises-section {
+    margin-bottom: 2rem;
+}
+
+h3 {
+    color: var(--purple-800);
+    border-bottom: 2px solid var(--purple-300);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.lessons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.lesson-card {
+    background-color: var(--purple-100);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.lesson-card:hover {
+    transform: translateY(-5px);
+}
+
+.lesson-card h4 {
+    color: var(--purple-800);
+    margin-top: 0;
+}
+
+.exercises-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.exercise-item {
+    background-color: var(--purple-100);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.exercise-description {
+    flex-grow: 1;
+    margin-right: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--purple-600);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: var(--purple-700);
+}
+
+.btn-secondary {
+    background-color: var(--purple-300);
+    color: var(--purple-900);
+}
+
+.btn-secondary:hover {
+    background-color: var(--purple-400);
+}
+
+@media (max-width: 768px) {
+    .module-container {
+        padding: 1rem;
+    }
+
+    .module-header {
+        margin: -1rem -1rem 1rem -1rem;
+        padding: 1rem;
+    }
+
+    .lessons-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .exercise-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .exercise-description {
+        margin-bottom: 0.5rem;
+    }
+}

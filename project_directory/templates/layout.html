@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Curso de C# en línea{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">C# Master</div>
+            <div class="nav-links">
+                <a href="{{ url_for('index') }}">Inicio</a>
+                {% if current_user.is_authenticated %}
+                    <a href="{{ url_for('dashboard') }}">Panel</a>
+                    <a href="{{ url_for('logout') }}">Cerrar Sesión</a>
+                {% else %}
+                    <a href="{{ url_for('login') }}">Iniciar Sesión</a>
+                    <a href="{{ url_for('register') }}">Registrarse</a>
+                {% endif %}
+                <a href="#cursos">Cursos</a>
+                <a href="#recursos">Recursos</a>
+                <a href="#comunidad">Comunidad</a>
+
+            </div>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 C# Master. Todos los derechos reservados.</p>
+            <div>
+                <a href="#terminos">Términos de Servicio</a>
+                <a href="#privacidad">Política de Privacidad</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

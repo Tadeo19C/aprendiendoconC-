@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}{{ module.title }}{% endblock %}
+
+{% block content %}
+<div class="module-container">
+    <header class="module-header">
+        <h2>{{ module.title }}</h2>
+    </header>
+
+    <div class="module-content">
+        <p>{{ module.content }}</p>
+    </div>
+
+    <section class="lessons-section">
+        <h3>Lecciones</h3>
+        <div class="lessons-grid">
+            {% for lesson in lessons %}
+                <div class="lesson-card">
+                    <h4>{{ lesson.title }}</h4>
+                    <p>{{ lesson.content|truncate(100) }}</p>
+                    <a href="{{ url_for('view_lesson', lesson_id=lesson.id) }}" class="btn btn-primary">Ver Detalle de la Lección</a>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <section class="exercises-section">
+        <h3>Ejercicios</h3>
+        <ul class="exercises-list">
+            {% for exercise in module.exercises %}
+                <li class="exercise-item">
+                    <div class="exercise-description">{{ exercise.description }}</div>
+                    <a href="{{ url_for('editor', exercise_id=exercise.id) }}" class="btn btn-secondary">Editar Ejercicio</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </section>
+</div>
+{% endblock %}

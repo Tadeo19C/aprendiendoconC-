@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}Certificación{% endblock %}
+
+{% block content %}
+<h2>Certificación</h2>
+{% if user.completed_course %}
+    <p>¡Felicidades! Has completado el curso.</p>
+    <a href="{{ url_for('download_certificate') }}" class="btn">Descargar Certificado</a>
+{% else %}
+    <p>Aún no has completado el curso. Completa todos los módulos para obtener tu certificado.</p>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}{{ lesson.title }}{% endblock %}
+
+{% block content %}
+    <div class="lesson-detail">
+        <h2>{{ lesson.title }}</h2>
+        <p><strong>Descripción:</strong> {{ lesson.description }}</p>
+
+        <h3>Contenido:</h3>
+        <div>
+            <p>{{ lesson.content }}</p>
+        </div>
+
+        <h3>Ejercicios</h3>
+        <ul>
+            {% for exercise in lesson.exercises %}
+                <li>
+                    <a href="{{ url_for('exercise_detail', exercise_id=exercise.id) }}">
+                        {{ exercise.title }}
+                    </a>
+                    - {{ exercise.description }}
+                </li>
+            {% endfor %}
+        </ul>
+
+        <a href="{{ url_for('module', module_id=lesson.module_id) }}" class="btn">
+            Volver al Módulo
+        </a>
+    </div>
+{% endblock %}
