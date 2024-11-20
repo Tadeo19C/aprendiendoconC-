@@ -9,7 +9,7 @@
 <body>
     <header>
         <nav class="container">
-            <div class="logo">C# Master</div>
+            <div class="logo"> <img src="static/logo.png"> </div>
             <div class="nav-links">
                 <a href="{{ url_for('index') }}">Inicio</a>
                 {% if current_user.is_authenticated %}
@@ -31,11 +31,11 @@
     </main>
     <footer>
         <div class="container">
-            <p>&copy; 2024 C# Master. Todos los derechos reservados.</p>
+            <p>&copy; 2024 Aprendiendo con C#. Todos los derechos reservados.</p>
             <div>
                 <a href="#terminos">Términos de Servicio</a>
                 <a href="#privacidad">Política de Privacidad</a>
-                <a href="#contacto">Contacto</a>
+                <a href="{{ url_for('contacto') }}">Contacto</a>
             </div>
         </div>
     </footer>

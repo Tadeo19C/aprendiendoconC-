@@ -234,6 +234,10 @@ def editor(exercise_id):
     # Si es una solicitud GET, mostramos el formulario con los datos actuales del ejercicio
     return render_template('editor.html', exercise=exercise, answers=answers)
 
+@app.route('/contacto')
+@login_required
+def contacto():
+    return render_template('contacto.html')
 
 # Ejecutar la aplicación
 if __name__ == "__main__":

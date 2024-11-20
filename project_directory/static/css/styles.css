@@ -43,6 +43,13 @@ nav {
     font-weight: bold;
 }
 
+.logo img {
+    height: 150px;
+    width: 180px;
+    background-position: center;
+}
+
+
 .nav-links a {
     color: var(--white);
     text-decoration: none;
@@ -101,7 +108,10 @@ h1 {
 .feature h3 {
     font-size: 1.2rem;
     margin-bottom: 1rem;
+    color: #ffffff;
 }
+
+
 
 .why-csharp {
     text-align: center;
@@ -117,6 +127,10 @@ h1 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
+}
+
+.reasons h3 {
+    color: #ffffff;
 }
 
 footer {
@@ -244,6 +258,7 @@ h3 {
 .exercise-description {
     flex-grow: 1;
     margin-right: 1rem;
+    color: black;
 }
 
 .btn {
