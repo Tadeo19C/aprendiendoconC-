@@ -95,6 +95,8 @@
 
 para mejor vista de nuestra pagina te dejaremos un viedeo de la funcionalidad de nuestra pagina
 
+https://youtube.com/shorts/HSbrkfAgOdk?si=TyS2pzca6-54OUYr
+
 
 
 
