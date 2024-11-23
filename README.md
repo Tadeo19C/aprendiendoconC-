@@ -1,15 +1,15 @@
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
-# Aprende C# con Nuestra Plataforma 🚀
+# Aprende con python con Nuestra Plataforma 🚀
 
-¡Bienvenido a **Aprende con C#**! 🎉 Una aplicación desarrollada con Flask para ayudarte a dominar los fundamentos y conceptos avanzados de C# de manera interactiva y personalizada.
+¡Bienvenido a **Aprende con python**! 🎉 Una aplicación desarrollada con Flask para ayudarte a dominar los fundamentos y conceptos avanzados con python de manera interactiva y personalizada.
 
 ---
 
 ## 🛠️ Características Principales
 
 ### Contenido Educativo
-- **Lecciones Interactivas**: Aprende desde los fundamentos de C# hasta conceptos avanzados.
+- **Lecciones Interactivas**: Aprende desde los fundamentos de python hasta conceptos avanzados.
 - **Ejercicios Prácticos**: Refuerza tus conocimientos con desafíos prácticos.
 
 ### Interacción con el Usuario
@@ -88,7 +88,13 @@
 
 ---
 
-¡Comienza tu viaje para dominar C# con **Aprende C#** y desbloquea tu potencial como programador! 💻
+¡Comienza tu viaje para dominar python con **Aprende Con python** y desbloquea tu potencial como programador! 💻
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+
+
+para mejor vista de nuestra pagina te dejaremos un viedeo de la funcionalidad de nuestra pagina
+
+
+
 
